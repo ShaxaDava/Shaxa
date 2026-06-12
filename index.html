@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahriyor Davlatov | Cybersecurity Student & Developer</title>
+  <meta name="description" content="Shahriyor Davlatov is an Information Security student from Fergana, Uzbekistan, focused on ethical hacking, C/C++, Python, Linux, Git, and cybersecurity fundamentals.">
+  <meta name="keywords" content="Shahriyor Davlatov, cybersecurity student, white hat hacker, information security, C++, C, Python, Linux, Git, Fergana Uzbekistan">
+  <meta name="author" content="Shahriyor Davlatov">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Shahriyor Davlatov | Cybersecurity Portfolio">
+  <meta property="og:description" content="Professional biography, CV, portfolio, and cybersecurity profile for Shahriyor Davlatov.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#06120f">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shahriyor Davlatov",
+      "birthDate": "2006-08-09",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fergana",
+        "addressCountry": "UZ"
+      },
+      "jobTitle": "Information Security Student",
+      "description": "Information Security student, future White Hat Hacker, and developer focused on C/C++, Python, Linux, Git, networking, and cybersecurity fundamentals.",
+      "knowsAbout": ["Information Security", "Cybersecurity", "Ethical Hacking", "C++", "C", "Python", "Linux", "Git", "Network Security"],
+      "sameAs": [
+        "https://github.com/shaxadava",
+        "https://t.me/shaxadava"
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #050807;
+      --bg-2: #081512;
+      --panel: rgba(9, 28, 26, .62);
+      --panel-strong: rgba(12, 38, 36, .82);
+      --text: #e9fff8;
+      --muted: #9fb9b2;
+      --soft: #6f8983;
+      --line: rgba(93, 255, 204, .17);
+      --green: #35ff9d;
+      --cyan: #28d7ff;
+      --blue: #6da8ff;
+      --danger: #ff5e7d;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .44);
+      --radius: 8px;
+      --max: 1180px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg: #eef7f4;
+      --bg-2: #f7fbfa;
+      --panel: rgba(255, 255, 255, .72);
+      --panel-strong: rgba(255, 255, 255, .92);
+      --text: #10201d;
+      --muted: #49615b;
+      --soft: #607c75;
+      --line: rgba(0, 120, 110, .18);
+      --shadow: 0 20px 60px rgba(18, 80, 75, .12);
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(53, 255, 157, .13), transparent 26rem),
+        radial-gradient(circle at 84% 8%, rgba(40, 215, 255, .14), transparent 24rem),
+        linear-gradient(135deg, var(--bg), var(--bg-2) 55%, var(--bg));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      opacity: .24;
+      background-image:
+        linear-gradient(rgba(53,255,157,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(40,215,255,.08) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    ::selection { background: rgba(53,255,157,.35); }
+
+    #network {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: .72;
+      pointer-events: none;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(var(--max), calc(100% - 24px));
+      z-index: 20;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(4, 13, 12, .68);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 16px 50px rgba(0,0,0,.25);
+    }
+
+    [data-theme="light"] .topbar { background: rgba(244, 252, 249, .82); }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(53,255,157,.38);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(53,255,157,.2), rgba(40,215,255,.14));
+      box-shadow: 0 0 24px rgba(53,255,157,.16);
+      color: var(--green);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .nav a {
+      padding: 9px 10px;
+      border-radius: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+      transition: color .2s ease, background .2s ease;
+    }
+
+    .nav a:hover { color: var(--text); background: rgba(53,255,157,.08); }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .segmented {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,.03);
+    }
+
+    .segmented button,
+    .icon-btn {
+      border: 0;
+      color: var(--muted);
+      background: transparent;
+      cursor: pointer;
+      min-width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .segmented button { font-size: 12px; font-weight: 800; }
+    .segmented button.active { color: #06120f; background: var(--green); }
+    .icon-btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .icon-btn:hover { color: var(--text); background: rgba(40,215,255,.1); }
+
+    main { position: relative; }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 124px 0 64px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, .72fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(53,255,157,.07);
+      color: var(--green);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 18px var(--green);
+      animation: blink 1.8s infinite;
+    }
+
+    @keyframes blink { 50% { opacity: .35; transform: scale(.75); } }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: .92;
+      letter-spacing: 0;
+      max-width: 900px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--text), var(--green) 48%, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .title-line {
+      min-height: 42px;
+      font-size: clamp(24px, 3.2vw, 42px);
+      font-weight: 800;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cursor {
+      width: 12px;
+      height: 1.1em;
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(53,255,157,.8);
+      animation: cursor 1s steps(2) infinite;
+    }
+
+    @keyframes cursor { 50% { opacity: 0; } }
+
+    .lead {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 17px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      cursor: pointer;
+      background: rgba(255,255,255,.04);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+      font-weight: 800;
+    }
+
+    .btn:hover { transform: translateY(-2px); border-color: rgba(53,255,157,.45); }
+    .btn.primary {
+      color: #04110e;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      box-shadow: 0 18px 52px rgba(53,255,157,.18);
+    }
+    .btn.ghost { color: var(--green); }
+
+    .socials {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .terminal-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+
+    .terminal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .dots { display: flex; gap: 7px; }
+    .dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--soft);
+    }
+    .dots span:nth-child(1) { background: #ff5e7d; }
+    .dots span:nth-child(2) { background: #ffd166; }
+    .dots span:nth-child(3) { background: var(--green); }
+
+    .terminal-body {
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+      font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .cmd { color: var(--green); }
+    .out { color: var(--muted); }
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .metric {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.035);
+    }
+    .metric strong {
+      display: block;
+      color: var(--text);
+      font-size: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    .metric span { color: var(--muted); font-size: 12px; }
+
+    section {
+      padding: 78px 0;
+      scroll-margin-top: 96px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .72fr) minmax(260px, .28fr);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .muted {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(53,255,157,.08), transparent 42%, rgba(40,215,255,.06));
+      opacity: .7;
+    }
+
+    .card > * { position: relative; z-index: 1; }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      letter-spacing: 0;
+    }
+    .card p { color: var(--muted); line-height: 1.72; margin: 0; }
+
+    .bio-list, .clean-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .bio-list li, .clean-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .check {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      margin-top: 2px;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      color: #04110e;
+      background: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .skill {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .skill:last-child { margin-bottom: 0; }
+    .skill-top {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text);
+      font-weight: 800;
+      gap: 12px;
+    }
+    .skill-top span:last-child { color: var(--green); }
+    .bar {
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .bar i {
+      display: block;
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+      box-shadow: 0 0 18px rgba(53,255,157,.42);
+      transition: width 1.2s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .tag {
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .project-meta {
+      display: grid;
+      gap: 9px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .project-meta b { color: var(--text); }
+    .status {
+      display: inline-flex;
+      width: max-content;
+      align-items: center;
+      gap: 7px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 9px;
+      bottom: 9px;
+      width: 1px;
+      background: linear-gradient(var(--green), var(--cyan));
+      opacity: .45;
+    }
+    .time-item {
+      position: relative;
+      padding-left: 46px;
+    }
+    .time-item::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      width: 17px;
+      height: 17px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 3px solid var(--green);
+      box-shadow: 0 0 18px rgba(53,255,157,.34);
+    }
+    .time-item h3 { margin: 0 0 5px; font-size: 18px; }
+    .time-item p { margin: 0; color: var(--muted); line-height: 1.62; }
+
+    .tool-cloud {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .tool {
+      min-height: 94px;
+      display: grid;
+      place-items: center;
+      gap: 7px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      color: var(--text);
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+    .tool span:first-child {
+      font-size: 28px;
+      color: var(--green);
+      font-family: "Cascadia Code", Consolas, monospace;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(300px, .2fr);
+      gap: 18px;
+    }
+    .contact-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .contact-links a, .contact-links div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      color: var(--muted);
+      background: rgba(255,255,255,.035);
+      min-width: 0;
+    }
+    .contact-links strong { color: var(--text); }
+
+    .chatbot {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: min(390px, calc(100vw - 40px));
+      z-index: 25;
+    }
+    .chat-panel {
+      display: none;
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel-strong);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .chat-panel.open { display: block; }
+    .chat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      font-weight: 900;
+    }
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      padding: 14px;
+      display: grid;
+      align-content: start;
+      gap: 10px;
+    }
+    .msg {
+      width: fit-content;
+      max-width: 86%;
+      padding: 10px 11px;
+      border-radius: 8px;
+      color: var(--text);
+      background: rgba(255,255,255,.065);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .msg.user {
+      justify-self: end;
+      background: linear-gradient(135deg, rgba(53,255,157,.26), rgba(40,215,255,.18));
+    }
+    .chat-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .chat-form input {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 0 12px;
+      outline: none;
+    }
+    .chat-form input:focus { border-color: rgba(53,255,157,.45); }
+    .chat-toggle {
+      margin-left: auto;
+      width: 58px;
+      height: 58px;
+      border-radius: 8px;
+      border: 1px solid rgba(53,255,157,.45);
+      color: #04110e;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 0 22px 60px rgba(53,255,157,.22);
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--soft);
+      border-top: 1px solid var(--line);
+    }
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-menu { display: none; }
+
+    @media (max-width: 980px) {
+      .topbar { grid-template-columns: auto auto; }
+      .nav {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+      .actions { justify-self: end; }
+      .hero-grid,
+      .section-head,
+      .grid-2,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding-top: 156px; }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tool-cloud { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .topbar {
+        top: 8px;
+        width: calc(100% - 16px);
+        gap: 9px;
+      }
+      .brand span:last-child { display: none; }
+      .nav a { font-size: 12px; padding: 8px; }
+      .segmented button, .icon-btn { min-width: 32px; height: 32px; }
+      .hero { padding: 142px 0 42px; }
+      h1 { font-size: clamp(42px, 15vw, 60px); }
+      .lead { font-size: 16px; }
+      .grid-3,
+      .tool-cloud,
+      .security-grid {
+        grid-template-columns: 1fr;
+      }
+      .card { padding: 18px; }
+      .hero-actions .btn { width: 100%; }
+      .socials a { flex: 1 1 160px; justify-content: center; }
+      section { padding: 56px 0; }
+      .chatbot {
+        right: 12px;
+        bottom: 12px;
+        width: calc(100vw - 24px);
+      }
+      .chat-toggle { width: 52px; height: 52px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="network" aria-hidden="true"></canvas>
+
+  <header class="topbar" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Shahriyor Davlatov home">
+      <span class="mark">SD</span>
+      <span>Shahriyor Davlatov</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about" data-i18n="navAbout">Men haqimda</a>
+      <a href="#skills" data-i18n="navSkills">Ko'nikmalar</a>
+      <a href="#projects" data-i18n="navProjects">Loyihalar</a>
+      <a href="#cyber" data-i18n="navCyber">Kiberxavfsizlik</a>
+      <a href="#contact" data-i18n="navContact">Aloqa</a>
+    </nav>
+    <div class="actions">
+      <div class="segmented" aria-label="Language selector">
+        <button type="button" class="active" data-lang="uz">UZ</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+      </div>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark and light mode">◐</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker"><span class="pulse"></span><span data-i18n="heroKicker">Farg'ona, O'zbekiston | Axborot xavfsizligi</span></div>
+          <h1><span data-i18n="heroName">Shahriyor</span><br><span class="gradient-text">Davlatov</span></h1>
+          <div class="title-line" aria-live="polite"><span id="typedTitle">Cybersecurity Student</span><span class="cursor"></span></div>
+          <p class="lead" data-i18n="heroSummary">Motivatsiyali axborot xavfsizligi talabasi, C/C++, Python, Linux va Git bo'yicha asosiy ko'nikmalarga ega. Maqsadi: etik, qonuniy va real muammolarni hal qiladigan professional White Hat Hacker bo'lish.</p>
+          <div class="hero-actions">
+            <button class="btn primary" id="downloadCv" type="button" data-i18n="downloadCv">CV yuklab olish (PDF)</button>
+            <a class="btn ghost" href="#contact" data-i18n="contactMe">Aloqa qilish</a>
+          </div>
+          <div class="socials" aria-label="Social links">
+            <a href="https://github.com/shaxadava" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <a href="https://t.me/shaxadava" target="_blank" rel="noreferrer">Telegram @shaxadava <span>↗</span></a>
+          </div>
+        </div>
+
+        <aside class="terminal-card reveal" aria-label="Professional profile snapshot">
+          <div class="terminal-head">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span>profile.scan</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="cmd">$ whoami</span><br><span class="out" data-i18n="terminalWho">Information Security Student | Future White Hat Hacker | Developer</span></div>
+            <div><span class="cmd">$ focus --areas</span><br><span class="out" data-i18n="terminalFocus">system security, networks, programming, ethical hacking</span></div>
+            <div><span class="cmd">$ status</span><br><span class="out" data-i18n="terminalStatus">1st year ATT Faculty student, building practical projects and security fundamentals.</span></div>
+            <div class="security-grid">
+              <div class="metric"><strong>2006</strong><span data-i18n="bornMetric">Tug'ilgan yil</span></div>
+              <div class="metric"><strong>1st</strong><span data-i18n="yearMetric">Talabalik bosqichi</span></div>
+              <div class="metric"><strong>3+</strong><span data-i18n="langMetric">Dasturlash tillari</span></div>
+              <div class="metric"><strong>24/7</strong><span data-i18n="learnMetric">O'rganish rejimi</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="aboutEyebrow">Biografiya</p>
+            <h2 data-i18n="aboutTitle">Aniq maqsadli, tez o'rganadigan kiberxavfsizlik profili.</h2>
+          </div>
+          <p data-i18n="aboutIntro">Sayt Shahriyorning CV, portfolio va professional raqamli identifikatsiyasini 3-5 daqiqada tushunarli qilib ko'rsatadi.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3 data-i18n="aboutCardTitle">Men haqimda</h3>
+            <p data-i18n="aboutBody">Shahriyor Davlatov 2006-yil 9-avgustda tug'ilgan, Farg'ona, O'zbekistonda yashaydi. U axborot xavfsizligi yo'nalishida tahsil oladi va kiberxavfsizlik, etik xakerlik, tizim xavfsizligi, tarmoqlar va dasturlashga katta qiziqadi. Uning asosiy motivatsiyasi bilimni amaliy loyihalar, real muammolar va qonuniy xavfsizlik amaliyoti orqali kuchaytirishdir.</p>
+            <ul class="bio-list">
+              <li><span class="check">✓</span><span data-i18n="bioOne">Tug'ilgan sana: 09 avgust 2006</span></li>
+              <li><span class="check">✓</span><span data-i18n="bioTwo">Joylashuv: Farg'ona, O'zbekiston</span></li>
+              <li><span class="check">✓</span><span data-i18n="bioThree">Yo'nalish: Axborot xavfsizligi va etik hacking</span></li>
+              <li><span class="check">✓</span><span data-i18n="bioFour">Yondashuv: uzluksiz o'rganish, intizom va real natija</span></li>
+            </ul>
+          </article>
+          <article class="card reveal" id="education">
+            <h3 data-i18n="educationTitle">Ta'lim</h3>
+            <p data-i18n="educationBody">ATT Faculty talabasidir. Axborot xavfsizligi mutaxassisligi bo'yicha 1-kursda tahsil olmoqda va fundamental dasturlash, kompyuter tizimlari, tarmoq asoslari hamda xavfsizlik tamoyillarini bosqichma-bosqich mustahkamlamoqda.</p>
+            <ul class="clean-list">
+              <li><span class="check">✓</span><span><strong>ATT Faculty</strong></span></li>
+              <li><span class="check">✓</span><span data-i18n="specialization">Mutaxassislik: Axborot xavfsizligi</span></li>
+              <li><span class="check">✓</span><span data-i18n="studentStatus">Holat: 1-kurs talabasi</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="skillsEyebrow">Texnik ko'nikmalar</p>
+            <h2 data-i18n="skillsTitle">Fondatsiya kuchli, yo'nalish aniq.</h2>
+          </div>
+          <p data-i18n="skillsIntro">Progress darajalari o'quv jarayoni va amaliy tajribaga asoslangan, shuning uchun ular o'sishga ochiq va halol ko'rsatilgan.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal" id="skillBars"></div>
+          <div class="card reveal">
+            <h3 data-i18n="experienceTitle">Tajriba</h3>
+            <p data-i18n="experienceBody">Hozircha professional ish tajribasi yo'q. Shahriyor o'zini shaxsiy loyihalar, algoritmik mashqlar, Linux/Git amaliyoti va kiberxavfsizlik asoslarini o'rganish orqali rivojlantirmoqda.</p>
+            <div class="tag-row">
+              <span class="tag" data-i18n="expTagOne">Personal projects</span>
+              <span class="tag" data-i18n="expTagTwo">Self-development</span>
+              <span class="tag" data-i18n="expTagThree">Learning journey</span>
+              <span class="tag" data-i18n="expTagFour">Hands-on practice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="projectsEyebrow">Portfolio</p>
+            <h2 data-i18n="projectsTitle">Amaliy loyihalar orqali o'sish.</h2>
+          </div>
+          <p data-i18n="projectsIntro">Loyihalar boshlang'ich darajada, lekin ular avtomatlashtirish, dasturlash mantiqi va kodni tartibli yuritish bo'yicha real qadamlarni ko'rsatadi.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3 data-i18n="botTitle">Telegram Bot</h3>
+            <p data-i18n="botDesc">Oddiy avtomatlashtirish vazifalari uchun yaratilgan bot. Foydalanuvchi buyruqlariga javob berish, asosiy mantiqni ajratish va API bilan ishlash tajribasini shakllantirishga xizmat qiladi.</p>
+            <div class="project-meta">
+              <span><b data-i18n="techLabel">Texnologiyalar:</b> Python, Telegram Bot API</span>
+              <span><b data-i18n="purposeLabel">Maqsad:</b> <span data-i18n="botPurpose">avtomatlashtirish va API amaliyoti</span></span>
+              <span class="status"><span class="pulse"></span><span data-i18n="statusLearning">Status: o'rganish jarayonida</span></span>
+            </div>
+            <div class="hero-actions"><a class="btn" href="https://github.com/shaxadava" target="_blank" rel="noreferrer" data-i18n="githubLink">GitHub havola</a></div>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="calcTitle">Calculator Application</h3>
+            <p data-i18n="calcDesc">C++ yordamida arifmetik amallarni bajaradigan konsol ilova. Loyiha sintaksis, funksiyalar, shart operatorlari va foydalanuvchi kiritmalari bilan ishlashni mustahkamlash uchun yaratilgan.</p>
+            <div class="project-meta">
+              <span><b data-i18n="techLabel2">Texnologiyalar:</b> C++</span>
+              <span><b data-i18n="purposeLabel2">Maqsad:</b> <span data-i18n="calcPurpose">dasturlash mantiqi va C++ asoslarini mustahkamlash</span></span>
+              <span class="status"><span class="pulse"></span><span data-i18n="statusComplete">Status: asosiy versiya tayyor</span></span>
+            </div>
+            <div class="hero-actions"><a class="btn" href="https://github.com/shaxadava" target="_blank" rel="noreferrer" data-i18n="githubLink2">GitHub havola</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cyber">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="cyberEyebrow">White Hat yo'li</p>
+            <h2 data-i18n="cyberTitle">Etik, qonuniy va himoyaga yo'naltirilgan xavfsizlik.</h2>
+          </div>
+          <p data-i18n="cyberIntro">Shahriyorning kiberxavfsizlikdagi yo'nalishi himoya, tahlil, mas'uliyat va qonuniy testlash tamoyillariga asoslanadi.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3 data-i18n="networkTitle">Network Security</h3>
+            <p data-i18n="networkBody">Tarmoq protokollari, xavfsiz konfiguratsiya, trafikni tushunish va zaifliklarni aniqlash asoslarini o'rganish.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="systemTitle">System Security</h3>
+            <p data-i18n="systemBody">Linux muhiti, ruxsatlar, tizim himoyasi, xavfsiz amaliyotlar va fundamental hardening tushunchalari.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="cryptoTitle">Cryptography Basics</h3>
+            <p data-i18n="cryptoBody">Shifrlashning asosiy g'oyalari, xeshlar, kalitlar, autentifikatsiya va ma'lumotlarni himoyalash konsepsiyalari.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="toolsEyebrow">Tools & Technologies</p>
+            <h2 data-i18n="toolsTitle">Ishlatilayotgan asosiy texnologiyalar.</h2>
+          </div>
+          <p data-i18n="toolsIntro">Ushbu stack Shahriyorning dasturlash va xavfsizlik bo'yicha boshlang'ich professional bazasini tashkil qiladi.</p>
+        </div>
+        <div class="tool-cloud reveal">
+          <div class="tool"><span>C++</span><span>C++</span></div>
+          <div class="tool"><span>C</span><span>C</span></div>
+          <div class="tool"><span>Py</span><span>Python</span></div>
+          <div class="tool"><span>⌁</span><span>Linux</span></div>
+          <div class="tool"><span>Git</span><span>Git</span></div>
+          <div class="tool"><span>GH</span><span>GitHub</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="goalsEyebrow">Yo'l xaritasi</p>
+            <h2 data-i18n="goalsTitle">Qisqa, o'rta va uzoq muddatli maqsadlar.</h2>
+          </div>
+          <p data-i18n="goalsIntro">Maqsadlar real o'sish ketma-ketligiga qurilgan: kod, asoslar, xavfsizlik amaliyoti, professional rol.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <div class="timeline">
+              <div class="time-item">
+                <h3 data-i18n="shortGoal">Qisqa muddat</h3>
+                <p data-i18n="shortGoalBody">Dasturlash ko'nikmalarini kuchaytirish, C/C++ va Python bo'yicha ko'proq amaliy loyihalar yaratish.</p>
+              </div>
+              <div class="time-item">
+                <h3 data-i18n="mediumGoal">O'rta muddat</h3>
+                <p data-i18n="mediumGoalBody">Ilg'or kiberxavfsizlik, tarmoq xavfsizligi va penetration testing metodologiyalarini o'rganish.</p>
+              </div>
+              <div class="time-item">
+                <h3 data-i18n="longGoal">Uzoq muddat</h3>
+                <p data-i18n="longGoalBody">Professional White Hat Hacker yoki Security Engineer sifatida ishlash.</p>
+              </div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="futureTitle">Kelajakdagi professional qiymat</h3>
+            <p data-i18n="futureBody">Shahriyor kompaniyalar uchun ishonchli, mas'uliyatli va tez o'rganadigan junior talent bo'lishga intiladi. U xavfsizlikni faqat hujum texnikasi sifatida emas, balki foydalanuvchi, tizim va biznesni himoya qiluvchi muhandislik madaniyati sifatida ko'radi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="contactEyebrow">Aloqa</p>
+            <h2 data-i18n="contactTitle">Recruiterlar va tech jamoalar uchun tezkor kontakt.</h2>
+          </div>
+          <p data-i18n="contactIntro">Portfolio, o'quv yo'nalishi, loyihalar yoki imkoniyatlar haqida bog'lanish uchun quyidagi kanallardan foydalaning.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="card reveal">
+            <h3 data-i18n="contactCardTitle">Shahriyor Davlatov</h3>
+            <p data-i18n="contactCardBody">Information Security Student | Future White Hat Hacker | Developer. Farg'ona, O'zbekiston.</p>
+            <div class="contact-links">
+              <a href="https://t.me/shaxadava" target="_blank" rel="noreferrer"><strong>Telegram</strong><span>@shaxadava</span></a>
+              <a href="https://github.com/shaxadava" target="_blank" rel="noreferrer"><strong>GitHub</strong><span>github.com/shaxadava</span></a>
+              <div><strong>Email</strong><span>email@example.com</span></div>
+              <div><strong data-i18n="locationLabel">Location</strong><span data-i18n="locationValue">Farg'ona, O'zbekiston</span></div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="cvTitle">CV Generator</h3>
+            <p data-i18n="cvBody">Bir tugma orqali Shahriyorning qisqa, recruiter-friendly CV faylini PDF sifatida yuklab oling.</p>
+            <div class="hero-actions"><button class="btn primary" type="button" id="downloadCv2" data-i18n="downloadCv2">PDF yaratish</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chatbot" aria-label="AI CV chatbot">
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-head">
+        <span data-i18n="chatTitle">CV AI Assistant</span>
+        <button class="icon-btn" type="button" id="chatClose" aria-label="Close chatbot">×</button>
+      </div>
+      <div class="messages" id="messages"></div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" autocomplete="off" data-i18n-placeholder="chatPlaceholder" placeholder="Shahriyor haqida savol bering...">
+        <button class="btn primary" type="submit" data-i18n="sendChat">Send</button>
+      </form>
+    </div>
+    <button class="chat-toggle" id="chatToggle" type="button" aria-label="Open CV chatbot">AI</button>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Shahriyor Davlatov</span>
+      <span data-i18n="footerLine">Ethical hacking only. Built for recruiters, HR managers, and tech companies.</span>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      uz: {
+        navAbout: "Men haqimda", navSkills: "Ko'nikmalar", navProjects: "Loyihalar", navCyber: "Kiberxavfsizlik", navContact: "Aloqa",
+        heroKicker: "Farg'ona, O'zbekiston | Axborot xavfsizligi", heroName: "Shahriyor",
+        heroSummary: "Motivatsiyali axborot xavfsizligi talabasi, C/C++, Python, Linux va Git bo'yicha asosiy ko'nikmalarga ega. Maqsadi: etik, qonuniy va real muammolarni hal qiladigan professional White Hat Hacker bo'lish.",
+        downloadCv: "CV yuklab olish (PDF)", contactMe: "Aloqa qilish",
+        terminalWho: "Information Security Student | Future White Hat Hacker | Developer",
+        terminalFocus: "tizim xavfsizligi, tarmoqlar, dasturlash, etik hacking",
+        terminalStatus: "ATT Faculty 1-kurs talabasi, amaliy loyihalar va xavfsizlik asoslarini o'rganmoqda.",
+        bornMetric: "Tug'ilgan yil", yearMetric: "Talabalik bosqichi", langMetric: "Dasturlash tillari", learnMetric: "O'rganish rejimi",
+        aboutEyebrow: "Biografiya", aboutTitle: "Aniq maqsadli, tez o'rganadigan kiberxavfsizlik profili.",
+        aboutIntro: "Sayt Shahriyorning CV, portfolio va professional raqamli identifikatsiyasini 3-5 daqiqada tushunarli qilib ko'rsatadi.",
+        aboutCardTitle: "Men haqimda",
+        aboutBody: "Shahriyor Davlatov 2006-yil 9-avgustda tug'ilgan, Farg'ona, O'zbekistonda yashaydi. U axborot xavfsizligi yo'nalishida tahsil oladi va kiberxavfsizlik, etik xakerlik, tizim xavfsizligi, tarmoqlar va dasturlashga katta qiziqadi. Uning asosiy motivatsiyasi bilimni amaliy loyihalar, real muammolar va qonuniy xavfsizlik amaliyoti orqali kuchaytirishdir.",
+        bioOne: "Tug'ilgan sana: 09 avgust 2006", bioTwo: "Joylashuv: Farg'ona, O'zbekiston", bioThree: "Yo'nalish: Axborot xavfsizligi va etik hacking", bioFour: "Yondashuv: uzluksiz o'rganish, intizom va real natija",
+        educationTitle: "Ta'lim", educationBody: "ATT Faculty talabasidir. Axborot xavfsizligi mutaxassisligi bo'yicha 1-kursda tahsil olmoqda va fundamental dasturlash, kompyuter tizimlari, tarmoq asoslari hamda xavfsizlik tamoyillarini bosqichma-bosqich mustahkamlamoqda.",
+        specialization: "Mutaxassislik: Axborot xavfsizligi", studentStatus: "Holat: 1-kurs talabasi",
+        skillsEyebrow: "Texnik ko'nikmalar", skillsTitle: "Fondatsiya kuchli, yo'nalish aniq.", skillsIntro: "Progress darajalari o'quv jarayoni va amaliy tajribaga asoslangan, shuning uchun ular o'sishga ochiq va halol ko'rsatilgan.",
+        experienceTitle: "Tajriba", experienceBody: "Hozircha professional ish tajribasi yo'q. Shahriyor o'zini shaxsiy loyihalar, algoritmik mashqlar, Linux/Git amaliyoti va kiberxavfsizlik asoslarini o'rganish orqali rivojlantirmoqda.",
+        expTagOne: "Shaxsiy loyihalar", expTagTwo: "O'z ustida ishlash", expTagThree: "O'rganish yo'li", expTagFour: "Amaliy mashq",
+        projectsEyebrow: "Portfolio", projectsTitle: "Amaliy loyihalar orqali o'sish.", projectsIntro: "Loyihalar boshlang'ich darajada, lekin ular avtomatlashtirish, dasturlash mantiqi va kodni tartibli yuritish bo'yicha real qadamlarni ko'rsatadi.",
+        botTitle: "Telegram Bot", botDesc: "Oddiy avtomatlashtirish vazifalari uchun yaratilgan bot. Foydalanuvchi buyruqlariga javob berish, asosiy mantiqni ajratish va API bilan ishlash tajribasini shakllantirishga xizmat qiladi.",
+        techLabel: "Texnologiyalar:", purposeLabel: "Maqsad:", botPurpose: "avtomatlashtirish va API amaliyoti", statusLearning: "Status: o'rganish jarayonida", githubLink: "GitHub havola",
+        calcTitle: "Calculator Application", calcDesc: "C++ yordamida arifmetik amallarni bajaradigan konsol ilova. Loyiha sintaksis, funksiyalar, shart operatorlari va foydalanuvchi kiritmalari bilan ishlashni mustahkamlash uchun yaratilgan.",
+        techLabel2: "Texnologiyalar:", purposeLabel2: "Maqsad:", calcPurpose: "dasturlash mantiqi va C++ asoslarini mustahkamlash", statusComplete: "Status: asosiy versiya tayyor", githubLink2: "GitHub havola",
+        cyberEyebrow: "White Hat yo'li", cyberTitle: "Etik, qonuniy va himoyaga yo'naltirilgan xavfsizlik.", cyberIntro: "Shahriyorning kiberxavfsizlikdagi yo'nalishi himoya, tahlil, mas'uliyat va qonuniy testlash tamoyillariga asoslanadi.",
+        networkTitle: "Network Security", networkBody: "Tarmoq protokollari, xavfsiz konfiguratsiya, trafikni tushunish va zaifliklarni aniqlash asoslarini o'rganish.",
+        systemTitle: "System Security", systemBody: "Linux muhiti, ruxsatlar, tizim himoyasi, xavfsiz amaliyotlar va fundamental hardening tushunchalari.",
+        cryptoTitle: "Cryptography Basics", cryptoBody: "Shifrlashning asosiy g'oyalari, xeshlar, kalitlar, autentifikatsiya va ma'lumotlarni himoyalash konsepsiyalari.",
+        toolsEyebrow: "Tools & Technologies", toolsTitle: "Ishlatilayotgan asosiy texnologiyalar.", toolsIntro: "Ushbu stack Shahriyorning dasturlash va xavfsizlik bo'yicha boshlang'ich professional bazasini tashkil qiladi.",
+        goalsEyebrow: "Yo'l xaritasi", goalsTitle: "Qisqa, o'rta va uzoq muddatli maqsadlar.", goalsIntro: "Maqsadlar real o'sish ketma-ketligiga qurilgan: kod, asoslar, xavfsizlik amaliyoti, professional rol.",
+        shortGoal: "Qisqa muddat", shortGoalBody: "Dasturlash ko'nikmalarini kuchaytirish, C/C++ va Python bo'yicha ko'proq amaliy loyihalar yaratish.",
+        mediumGoal: "O'rta muddat", mediumGoalBody: "Ilg'or kiberxavfsizlik, tarmoq xavfsizligi va penetration testing metodologiyalarini o'rganish.",
+        longGoal: "Uzoq muddat", longGoalBody: "Professional White Hat Hacker yoki Security Engineer sifatida ishlash.",
+        futureTitle: "Kelajakdagi professional qiymat", futureBody: "Shahriyor kompaniyalar uchun ishonchli, mas'uliyatli va tez o'rganadigan junior talent bo'lishga intiladi. U xavfsizlikni faqat hujum texnikasi sifatida emas, balki foydalanuvchi, tizim va biznesni himoya qiluvchi muhandislik madaniyati sifatida ko'radi.",
+        contactEyebrow: "Aloqa", contactTitle: "Recruiterlar va tech jamoalar uchun tezkor kontakt.", contactIntro: "Portfolio, o'quv yo'nalishi, loyihalar yoki imkoniyatlar haqida bog'lanish uchun quyidagi kanallardan foydalaning.",
+        contactCardTitle: "Shahriyor Davlatov", contactCardBody: "Information Security Student | Future White Hat Hacker | Developer. Farg'ona, O'zbekiston.",
+        locationLabel: "Joylashuv", locationValue: "Farg'ona, O'zbekiston", cvTitle: "CV Generator", cvBody: "Bir tugma orqali Shahriyorning qisqa, recruiter-friendly CV faylini PDF sifatida yuklab oling.", downloadCv2: "PDF yaratish",
+        chatTitle: "CV AI Assistant", chatPlaceholder: "Shahriyor haqida savol bering...", sendChat: "Send",
+        footerLine: "Faqat etik hacking. Recruiterlar, HR managerlar va tech kompaniyalar uchun yaratilgan."
+      },
+      en: {
+        navAbout: "About", navSkills: "Skills", navProjects: "Projects", navCyber: "Cybersecurity", navContact: "Contact",
+        heroKicker: "Fergana, Uzbekistan | Information Security", heroName: "Shahriyor",
+        heroSummary: "Motivated Information Security student with foundational C/C++, Python, Linux, and Git skills. His goal is to become a professional White Hat Hacker who solves real problems ethically and legally.",
+        downloadCv: "Download CV (PDF)", contactMe: "Contact",
+        terminalWho: "Information Security Student | Future White Hat Hacker | Developer",
+        terminalFocus: "system security, networks, programming, ethical hacking",
+        terminalStatus: "1st year ATT Faculty student, building practical projects and security fundamentals.",
+        bornMetric: "Birth year", yearMetric: "Student year", langMetric: "Programming languages", learnMetric: "Learning mode",
+        aboutEyebrow: "Biography", aboutTitle: "A focused, fast-learning cybersecurity profile.",
+        aboutIntro: "This site presents Shahriyor's CV, portfolio, and professional digital identity clearly within 3-5 minutes.",
+        aboutCardTitle: "About me",
+        aboutBody: "Shahriyor Davlatov was born on 09 August 2006 and lives in Fergana, Uzbekistan. He studies Information Security and is deeply interested in cybersecurity, ethical hacking, system security, networks, and programming. His motivation is to strengthen knowledge through practical projects, real-world problems, and legal security practice.",
+        bioOne: "Born: 09 August 2006", bioTwo: "Location: Fergana, Uzbekistan", bioThree: "Focus: Information Security and ethical hacking", bioFour: "Mindset: continuous learning, discipline, real results",
+        educationTitle: "Education", educationBody: "He studies at ATT Faculty as a 1st year Information Security student, building fundamentals in programming, computer systems, networking basics, and security principles.",
+        specialization: "Specialization: Information Security", studentStatus: "Current status: 1st year student",
+        skillsEyebrow: "Technical skills", skillsTitle: "Strong foundation, clear direction.", skillsIntro: "Progress levels are honest and based on current study plus practical exposure, with room for fast growth.",
+        experienceTitle: "Experience", experienceBody: "No professional job experience yet. Shahriyor is developing through personal projects, algorithmic practice, Linux/Git work, and cybersecurity fundamentals.",
+        expTagOne: "Personal projects", expTagTwo: "Self-development", expTagThree: "Learning journey", expTagFour: "Hands-on practice",
+        projectsEyebrow: "Portfolio", projectsTitle: "Growing through practical projects.", projectsIntro: "These beginner projects show real steps in automation, programming logic, and organized code practice.",
+        botTitle: "Telegram Bot", botDesc: "A basic automation bot created to respond to user commands, separate core logic, and gain experience working with APIs.",
+        techLabel: "Technologies:", purposeLabel: "Purpose:", botPurpose: "automation and API practice", statusLearning: "Status: learning in progress", githubLink: "GitHub link",
+        calcTitle: "Calculator Application", calcDesc: "A C++ console application for arithmetic operations, created to strengthen syntax, functions, conditionals, and user input handling.",
+        techLabel2: "Technologies:", purposeLabel2: "Purpose:", calcPurpose: "programming logic and C++ fundamentals", statusComplete: "Status: basic version complete", githubLink2: "GitHub link",
+        cyberEyebrow: "White Hat path", cyberTitle: "Ethical, legal, defense-minded security.", cyberIntro: "Shahriyor's cybersecurity direction is based on defense, analysis, responsibility, and authorized testing.",
+        networkTitle: "Network Security", networkBody: "Learning network protocols, secure configuration, traffic awareness, and vulnerability fundamentals.",
+        systemTitle: "System Security", systemBody: "Linux environments, permissions, system protection, secure practices, and basic hardening concepts.",
+        cryptoTitle: "Cryptography Basics", cryptoBody: "Core ideas of encryption, hashes, keys, authentication, and protecting data.",
+        toolsEyebrow: "Tools & Technologies", toolsTitle: "Core technologies in use.", toolsIntro: "This stack forms Shahriyor's early professional base for programming and security work.",
+        goalsEyebrow: "Roadmap", goalsTitle: "Short, medium, and long-term goals.", goalsIntro: "The goals follow a realistic growth path: code, fundamentals, security practice, professional role.",
+        shortGoal: "Short term", shortGoalBody: "Improve programming skills and build more practical projects in C/C++ and Python.",
+        mediumGoal: "Medium term", mediumGoalBody: "Learn advanced cybersecurity, network security, and penetration testing methodologies.",
+        longGoal: "Long term", longGoalBody: "Become a professional White Hat Hacker or Security Engineer.",
+        futureTitle: "Future professional value", futureBody: "Shahriyor aims to become a reliable, responsible, fast-learning junior talent for companies. He sees security not only as attack techniques, but as an engineering culture that protects users, systems, and business.",
+        contactEyebrow: "Contact", contactTitle: "Fast contact for recruiters and tech teams.", contactIntro: "Use the channels below for portfolio, education, project, or opportunity discussions.",
+        contactCardTitle: "Shahriyor Davlatov", contactCardBody: "Information Security Student | Future White Hat Hacker | Developer. Fergana, Uzbekistan.",
+        locationLabel: "Location", locationValue: "Fergana, Uzbekistan", cvTitle: "CV Generator", cvBody: "Generate a short, recruiter-friendly CV as a PDF with one button.", downloadCv2: "Generate PDF",
+        chatTitle: "CV AI Assistant", chatPlaceholder: "Ask about Shahriyor...", sendChat: "Send",
+        footerLine: "Ethical hacking only. Built for recruiters, HR managers, and tech companies."
+      },
+      ru: {
+        navAbout: "Обо мне", navSkills: "Навыки", navProjects: "Проекты", navCyber: "Кибербезопасность", navContact: "Контакты",
+        heroKicker: "Фергана, Узбекистан | Информационная безопасность", heroName: "Shahriyor",
+        heroSummary: "Мотивированный студент информационной безопасности с базовыми навыками C/C++, Python, Linux и Git. Цель: стать профессиональным White Hat Hacker, который решает реальные задачи этично и законно.",
+        downloadCv: "Скачать CV (PDF)", contactMe: "Связаться",
+        terminalWho: "Студент ИБ | Будущий White Hat Hacker | Developer",
+        terminalFocus: "системная безопасность, сети, программирование, ethical hacking",
+        terminalStatus: "Студент 1 курса ATT Faculty, развивает проекты и основы безопасности.",
+        bornMetric: "Год рождения", yearMetric: "Курс", langMetric: "Языки программирования", learnMetric: "Режим обучения",
+        aboutEyebrow: "Биография", aboutTitle: "Сфокусированный профиль в кибербезопасности с быстрым обучением.",
+        aboutIntro: "Сайт показывает CV, портфолио и профессиональную цифровую идентичность Shahriyor за 3-5 минут.",
+        aboutCardTitle: "Обо мне",
+        aboutBody: "Shahriyor Davlatov родился 09 августа 2006 года и живет в Фергане, Узбекистан. Он учится по направлению информационной безопасности и интересуется кибербезопасностью, ethical hacking, системной безопасностью, сетями и программированием. Его мотивация — укреплять знания через практические проекты, реальные задачи и законную security-практику.",
+        bioOne: "Дата рождения: 09 августа 2006", bioTwo: "Локация: Фергана, Узбекистан", bioThree: "Фокус: информационная безопасность и ethical hacking", bioFour: "Подход: постоянное обучение, дисциплина, реальный результат",
+        educationTitle: "Образование", educationBody: "Он учится на ATT Faculty, направление Information Security, 1 курс. Сейчас укрепляет основы программирования, компьютерных систем, сетей и принципов безопасности.",
+        specialization: "Специализация: информационная безопасность", studentStatus: "Статус: студент 1 курса",
+        skillsEyebrow: "Технические навыки", skillsTitle: "Сильная база, ясное направление.", skillsIntro: "Уровни показаны честно: по текущему обучению и практическому опыту, с большим потенциалом роста.",
+        experienceTitle: "Опыт", experienceBody: "Профессионального опыта пока нет. Shahriyor развивается через личные проекты, алгоритмическую практику, Linux/Git и основы кибербезопасности.",
+        expTagOne: "Личные проекты", expTagTwo: "Саморазвитие", expTagThree: "Путь обучения", expTagFour: "Практика",
+        projectsEyebrow: "Портфолио", projectsTitle: "Рост через практические проекты.", projectsIntro: "Начальные проекты показывают реальные шаги в автоматизации, программной логике и аккуратной работе с кодом.",
+        botTitle: "Telegram Bot", botDesc: "Базовый бот для автоматизации: ответы на команды пользователя, разделение основной логики и опыт работы с API.",
+        techLabel: "Технологии:", purposeLabel: "Цель:", botPurpose: "автоматизация и практика API", statusLearning: "Статус: в процессе обучения", githubLink: "GitHub ссылка",
+        calcTitle: "Calculator Application", calcDesc: "Консольное приложение на C++ для арифметических операций, созданное для закрепления синтаксиса, функций, условий и пользовательского ввода.",
+        techLabel2: "Технологии:", purposeLabel2: "Цель:", calcPurpose: "логика программирования и основы C++", statusComplete: "Статус: базовая версия готова", githubLink2: "GitHub ссылка",
+        cyberEyebrow: "Путь White Hat", cyberTitle: "Этичная, законная и defensive security.", cyberIntro: "Направление Shahriyor в кибербезопасности основано на защите, анализе, ответственности и разрешенном тестировании.",
+        networkTitle: "Network Security", networkBody: "Изучение сетевых протоколов, безопасной конфигурации, понимания трафика и основ уязвимостей.",
+        systemTitle: "System Security", systemBody: "Linux, права доступа, защита систем, безопасные практики и базовые hardening-концепции.",
+        cryptoTitle: "Cryptography Basics", cryptoBody: "Основы шифрования, хешей, ключей, аутентификации и защиты данных.",
+        toolsEyebrow: "Tools & Technologies", toolsTitle: "Основные технологии.", toolsIntro: "Этот стек формирует начальную профессиональную базу Shahriyor для программирования и security.",
+        goalsEyebrow: "Дорожная карта", goalsTitle: "Кратко-, средне- и долгосрочные цели.", goalsIntro: "Цели построены по реалистичному пути роста: код, основы, security-практика, профессиональная роль.",
+        shortGoal: "Краткосрочно", shortGoalBody: "Улучшить навыки программирования и создать больше практических проектов на C/C++ и Python.",
+        mediumGoal: "Среднесрочно", mediumGoalBody: "Изучить продвинутую кибербезопасность, сетевую безопасность и методологии penetration testing.",
+        longGoal: "Долгосрочно", longGoalBody: "Стать профессиональным White Hat Hacker или Security Engineer.",
+        futureTitle: "Будущая профессиональная ценность", futureBody: "Shahriyor стремится стать надежным, ответственным и быстро обучаемым junior talent для компаний. Он видит безопасность не только как техники атаки, а как инженерную культуру защиты пользователей, систем и бизнеса.",
+        contactEyebrow: "Контакты", contactTitle: "Быстрый контакт для рекрутеров и tech-команд.", contactIntro: "Используйте каналы ниже для обсуждения портфолио, учебы, проектов или возможностей.",
+        contactCardTitle: "Shahriyor Davlatov", contactCardBody: "Information Security Student | Future White Hat Hacker | Developer. Фергана, Узбекистан.",
+        locationLabel: "Локация", locationValue: "Фергана, Узбекистан", cvTitle: "CV Generator", cvBody: "Создайте короткое recruiter-friendly CV в PDF одним нажатием.", downloadCv2: "Создать PDF",
+        chatTitle: "CV AI Assistant", chatPlaceholder: "Спросите о Shahriyor...", sendChat: "Send",
+        footerLine: "Только ethical hacking. Создано для рекрутеров, HR и tech-компаний."
+      }
+    };
+
+    const titles = {
+      uz: ["Cybersecurity Student", "White Hat Hacker (Future)", "C/C++ Developer", "Python Developer", "Linux & Git Enthusiast"],
+      en: ["Cybersecurity Student", "White Hat Hacker (Future)", "C/C++ Developer", "Python Developer", "Linux & Git Enthusiast"],
+      ru: ["Cybersecurity Student", "White Hat Hacker (Future)", "C/C++ Developer", "Python Developer", "Linux & Git Enthusiast"]
+    };
+
+    const skills = [
+      ["C++", 68], ["C", 60], ["Python", 62], ["Linux", 48],
+      ["Git & GitHub", 55], ["Problem Solving", 66],
+      ["Cybersecurity fundamentals", 52], ["Networking basics", 45]
+    ];
+
+    let currentLang = "uz";
+    let titleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const typedTitle = document.getElementById("typedTitle");
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-lang]").forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
+      document.querySelectorAll("[data-i18n]").forEach(node => {
+        const key = node.dataset.i18n;
+        if (translations[lang][key]) node.textContent = translations[lang][key];
+      });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(node => {
+        const key = node.dataset.i18nPlaceholder;
+        if (translations[lang][key]) node.placeholder = translations[lang][key];
+      });
+      titleIndex = 0;
+      charIndex = 0;
+      deleting = false;
+      typedTitle.textContent = "";
+      renderSkills();
+    }
+
+    function typeLoop() {
+      const list = titles[currentLang];
+      const word = list[titleIndex % list.length];
+      if (deleting) charIndex -= 1; else charIndex += 1;
+      typedTitle.textContent = word.slice(0, charIndex);
+      let delay = deleting ? 42 : 76;
+      if (!deleting && charIndex === word.length) {
+        delay = 1200;
+        deleting = true;
+      } else if (deleting && charIndex === 0) {
+        deleting = false;
+        titleIndex += 1;
+        delay = 260;
+      }
+      setTimeout(typeLoop, delay);
+    }
+
+    function renderSkills() {
+      const box = document.getElementById("skillBars");
+      box.innerHTML = `<h3>${currentLang === "ru" ? "Уровни навыков" : currentLang === "en" ? "Skill levels" : "Ko'nikma darajalari"}</h3>`;
+      skills.forEach(([name, value]) => {
+        const skill = document.createElement("div");
+        skill.className = "skill";
+        skill.innerHTML = `<div class="skill-top"><span>${name}</span><span>${value}%</span></div><div class="bar"><i style="width:${value}%"></i></div>`;
+        box.appendChild(skill);
+      });
+    }
+
+    document.querySelectorAll("[data-lang]").forEach(btn => btn.addEventListener("click", () => applyLanguage(btn.dataset.lang)));
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const isLight = document.body.dataset.theme === "light";
+      document.body.dataset.theme = isLight ? "dark" : "light";
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          entry.target.querySelectorAll(".bar i").forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = "0";
+            requestAnimationFrame(() => { bar.style.width = width; });
+          });
+        }
+      });
+    }, { threshold: .14 });
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    function setupNetwork() {
+      const canvas = document.getElementById("network");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+      let pointer = { x: -9999, y: -9999 };
+
+      function resize() {
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(innerWidth * ratio);
+        canvas.height = Math.floor(innerHeight * ratio);
+        canvas.style.width = innerWidth + "px";
+        canvas.style.height = innerHeight + "px";
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        const count = Math.min(90, Math.max(36, Math.floor(innerWidth * innerHeight / 18000)));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * innerWidth,
+          y: Math.random() * innerHeight,
+          vx: (Math.random() - .5) * .32,
+          vy: (Math.random() - .5) * .32,
+          r: Math.random() * 1.8 + .8
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        particles.forEach((p, i) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > innerWidth) p.vx *= -1;
+          if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(53,255,157,.72)";
+          ctx.fill();
+          for (let j = i + 1; j < particles.length; j++) {
+            const q = particles[j];
+            const dist = Math.hypot(p.x - q.x, p.y - q.y);
+            if (dist < 122) {
+              ctx.strokeStyle = `rgba(40,215,255,${(1 - dist / 122) * .24})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(q.x, q.y);
+              ctx.stroke();
+            }
+          }
+          const pd = Math.hypot(p.x - pointer.x, p.y - pointer.y);
+          if (pd < 170) {
+            ctx.strokeStyle = `rgba(53,255,157,${(1 - pd / 170) * .35})`;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(pointer.x, pointer.y);
+            ctx.stroke();
+          }
+        });
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener("resize", resize);
+      window.addEventListener("pointermove", e => { pointer = { x: e.clientX, y: e.clientY }; });
+      window.addEventListener("pointerleave", () => { pointer = { x: -9999, y: -9999 }; });
+      resize();
+      draw();
+    }
+
+    function pdfEscape(text) {
+      return String(text).replace(/[()\\]/g, "\\$&");
+    }
+
+    function generatePdf() {
+      const lines = [
+        "Shahriyor Davlatov",
+        "Information Security Student | Future White Hat Hacker | Developer",
+        "",
+        "Born: 09 August 2006",
+        "Location: Fergana, Uzbekistan",
+        "Telegram: @shaxadava",
+        "GitHub: github.com/shaxadava",
+        "Email: email@example.com",
+        "",
+        "Professional Summary",
+        "Motivated cybersecurity student focused on ethical hacking, system security, networks, and programming.",
+        "Foundational skills: C++, C, Python, Linux, Git & GitHub, problem solving, cybersecurity fundamentals.",
+        "",
+        "Education",
+        "ATT Faculty - Information Security specialization - 1st year student.",
+        "",
+        "Projects",
+        "Telegram Bot - Basic automation bot using Python and Telegram Bot API.",
+        "Calculator Application - C++ console application for arithmetic operations.",
+        "",
+        "Goals",
+        "Short term: Improve programming skills and build more projects.",
+        "Medium term: Learn advanced cybersecurity and penetration testing.",
+        "Long term: Become a professional White Hat Hacker / Security Engineer.",
+        "",
+        "Ethics",
+        "Committed to ethical and legal hacking only."
+      ];
+      const content = ["BT", "/F1 24 Tf", "56 780 Td", `(Shahriyor Davlatov) Tj`, "/F1 11 Tf", "0 -30 Td"];
+      lines.slice(1).forEach(line => {
+        content.push(`(${pdfEscape(line)}) Tj`, "0 -16 Td");
+      });
+      content.push("ET");
+      const stream = content.join("\n");
+      const objects = [
+        "1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj",
+        "2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj",
+        "3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj",
+        "4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj",
+        `5 0 obj << /Length ${stream.length} >> stream\n${stream}\nendstream endobj`
+      ];
+      let pdf = "%PDF-1.4\n";
+      const offsets = [0];
+      objects.forEach(obj => {
+        offsets.push(pdf.length);
+        pdf += obj + "\n";
+      });
+      const xref = pdf.length;
+      pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
+      offsets.slice(1).forEach(offset => {
+        pdf += String(offset).padStart(10, "0") + " 00000 n \n";
+      });
+      pdf += `trailer << /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
+      const blob = new Blob([pdf], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Shahriyor-Davlatov-CV.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    document.getElementById("downloadCv").addEventListener("click", generatePdf);
+    document.getElementById("downloadCv2").addEventListener("click", generatePdf);
+
+    const chatPanel = document.getElementById("chatPanel");
+    const messages = document.getElementById("messages");
+    const chatInput = document.getElementById("chatInput");
+
+    function addMessage(text, user = false) {
+      const msg = document.createElement("div");
+      msg.className = "msg" + (user ? " user" : "");
+      msg.textContent = text;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botReply(question) {
+      const q = question.toLowerCase();
+      if (q.includes("skill") || q.includes("ko'nik") || q.includes("навы")) {
+        return "Shahriyor's current foundation includes C++, C, Python, Linux basics, Git/GitHub, problem solving, cybersecurity fundamentals, and networking basics.";
+      }
+      if (q.includes("project") || q.includes("loyiha") || q.includes("проект")) {
+        return "He has beginner portfolio projects: a Telegram automation bot and a C++ calculator application, both focused on practical programming growth.";
+      }
+      if (q.includes("contact") || q.includes("telegram") || q.includes("aloqa") || q.includes("контакт")) {
+        return "Best contact: Telegram @shaxadava. GitHub is listed as github.com/shaxadava, and the email placeholder is email@example.com.";
+      }
+      if (q.includes("goal") || q.includes("maqsad") || q.includes("цель")) {
+        return "His long-term goal is to become a professional White Hat Hacker or Security Engineer, while improving programming and learning advanced cybersecurity step by step.";
+      }
+      if (q.includes("ethic") || q.includes("white") || q.includes("хак")) {
+        return "His cybersecurity path is strictly ethical and legal: defense-minded learning, authorized testing, system security, network security, and cryptography basics.";
+      }
+      return "Shahriyor Davlatov is a motivated Information Security student from Fergana, Uzbekistan, born on 09 August 2006, focused on ethical hacking, programming, Linux, Git, and cybersecurity fundamentals.";
+    }
+
+    document.getElementById("chatToggle").addEventListener("click", () => {
+      chatPanel.classList.toggle("open");
+      if (messages.children.length === 0) addMessage("Hi. Ask me about Shahriyor's CV, skills, projects, goals, or cybersecurity path.");
+      setTimeout(() => chatInput.focus(), 100);
+    });
+    document.getElementById("chatClose").addEventListener("click", () => chatPanel.classList.remove("open"));
+    document.getElementById("chatForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const value = chatInput.value.trim();
+      if (!value) return;
+      addMessage(value, true);
+      chatInput.value = "";
+      setTimeout(() => addMessage(botReply(value)), 220);
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderSkills();
+    applyLanguage("uz");
+    typeLoop();
+    setupNetwork();
+  </script>
+</body>
+</html>
